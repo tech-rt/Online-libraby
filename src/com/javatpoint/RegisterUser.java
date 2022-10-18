@@ -6,6 +6,64 @@ static int status=0;
 public static int register(String username,String password,String repassword,double phone,String adderess,String syd){
 	//public static int register(String email,String password,String gender,String country,String name){
 
+	Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter the size of array");
+		int a = sc.nextInt();
+		int[] arr = new int[a];
+
+		System.out.println("Enter the array");
+
+		for (int i = 0; i < a; i++) {
+			arr[i] = sc.nextInt();
+		} 
+		
+		int index1 = 0;
+		int index2 = 0;
+		
+		for (int i = a-2; i >= 0; i--) {
+			if (arr[i] < arr[i+1]) {
+				index1 = i;
+				break;
+			}
+		}
+		
+		for (int i = a-1; i >= 0; i--) {
+			if (arr[i] > arr[index1]) {
+				index2 = i;
+				break;
+			}
+		}
+	
+		//swap
+		int tempindex;
+		tempindex = arr[index1];
+		arr[index1] = arr[index2];
+		arr[index2] = tempindex;
+		
+		//reverse
+		int temp;
+		int nul = index1 +1;
+		int b = a-1;
+       
+       while (nul < b)
+       {
+           temp = arr[nul];
+           arr[nul] = arr[b];
+           arr[b] = temp;
+           nul++;
+           b--;
+       }
+		
+		System.out.println("the new array");
+
+		for (int i = 0; i < a; i++) {
+			System.out.print(arr[i]);
+		} 
+
+	}
+
+	
 	Connection con=GetCon.getCon();
 	PreparedStatement ps;
 	try {
