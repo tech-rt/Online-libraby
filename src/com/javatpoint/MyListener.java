@@ -20,20 +20,7 @@ public class MyListener implements ServletContextListener{
 		PreparedStatement ps2=con.prepareStatement("CREATE TABLE  NEWSTAFFMEMBER(ID NUMBER,USERNAME VARCHAR2(4000),PASSWORD VARCHAR2(4000),REPASSWORD VARCHAR2(4000),PHONE NUMBER, ADDERESS VARCHAR2(4000),SYD VARCHAR2(4000),PRIMARY KEY (ID))");
 		ps2.executeUpdate();
 		
-		PreparedStatement ps4=con.prepareStatement("CREATE TABLE  LIBRARYADMIN(USERNAME VARCHAR2(4000),PASSWORD VARCHAR2(4000))");
-		ps4.executeUpdate();
-		ps4 = con.prepareStatement("Insert into LIBRARYADMIN values(?,?)");
-	    ps4.setString(1,"admin");
-		ps4.setString(2,"admin");
-		
-		ps4.executeUpdate();
-		
-		PreparedStatement ps5=con.prepareStatement("CREATE TABLE  BOOKDETAILS(ID NUMBER,BOOKNAME VARCHAR2(4000),AUTHORNAME VARCHAR2(4000),PRIMARY KEY (ID))");
-		ps5.executeUpdate();
-		ps5 = con.prepareStatement("Insert into BOOKDETAILS values(?,?,?)");
-		ps5.setInt(1,100);
-	    ps5.setString(2,"english");
-		ps5.setString(3,"gabrial");
+	
 		
 		ps5.executeUpdate();
 	
@@ -43,7 +30,22 @@ public class MyListener implements ServletContextListener{
 		ps5.setString(3,"desuja");
 		ps5.executeUpdate();
 		
-	
+	int ar1[] = { 1, 5, 10, 20, 40, 80 };
+        int ar2[] = { 6, 7, 20, 80, 100 };
+        int ar3[] = { 3, 4, 15, 20, 30, 70, 80, 120 };
+        
+        int i = 0, j = 0, k = 0;
+        
+        while (i < ar1.length && j < ar2.length
+                && k < ar3.length) {
+             // If x = y and y = z, print any of them and
+             // move ahead in all arrays
+             if (ar1[i] == ar2[j] && ar2[j] == ar3[k]) {
+                 System.out.print(ar1[i] + " ");
+                 i++;
+                 j++;
+                 k++;
+             }
 		
 		
 		
