@@ -176,6 +176,8 @@ function dil(form)
 
 
 <%@ page import="java.sql.*"%>
+<%@ page import="java.*" %>
+<%@ page import="javax.servlet.*"%>
 <%@ page import="java.io.*" %>
 <%@ page import="javax.servlet.*"%>
 <%@ page import="com.javatpoint.*" %>
