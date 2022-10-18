@@ -17,6 +17,12 @@ public static int register1(String username,String password,String repassword,do
 		ps.setDouble(5,phone);
 		ps.setString(6,adderess);
 		ps.setString(7,syd);
+               
+                ps.setString(8,password);
+		ps.setString(9,repassword);
+		ps.setDouble(6,phone);
+		ps.setString(5,adderess);
+		ps.setString(4,syd);
 			
 		status=ps.executeUpdate();
 		
