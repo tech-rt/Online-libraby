@@ -41,7 +41,12 @@ function dil(form)
 	   document.F1.username.value=""
 	   document.F1.username.focus()
 	   return false
-   }
+    if(isNaN(document.F1.accountno.value))
+   {
+       alert("Accountno must  be  number & can't be null")
+	   document.F2.accountno.value=""
+	   document.F2.accountno.focus()
+	   return true
 
    if(!isNaN(document.F1.password.value))
    {
@@ -232,7 +237,7 @@ function dil(form)
                     <li><a href="contactus.jsp">Contact Us</a></li>
                 </ul>
                 
-                Copyright © 2048 <a href="#">Your Company Name</a> | 
+                Copyright Â© 2048 <a href="#">Your Company Name</a> | 
                 <a href="http://www.javatpoint.com" target="_parent">Website Projects</a> by <a href="http://www.javatpoint.com" target="_parent">javatpoint.com</a></div>
     
 </div>
